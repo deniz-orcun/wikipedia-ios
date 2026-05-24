@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
-import Domain
+import UseCases
+import RepositoryProtocols
 
 public enum LocationsContainer {
 

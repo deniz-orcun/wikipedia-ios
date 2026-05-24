@@ -1,6 +1,7 @@
 import Foundation
 import Observation
-import Domain
+import DomainModels
+import UseCases
 
 @Observable
 final class AddLocationViewModel {

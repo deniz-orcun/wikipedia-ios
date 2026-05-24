@@ -1,5 +1,5 @@
-import Foundation
-import Domain
+import DomainModels
+import DataModels
 
 extension LocationDataModel {
     func toDomain() -> Location {

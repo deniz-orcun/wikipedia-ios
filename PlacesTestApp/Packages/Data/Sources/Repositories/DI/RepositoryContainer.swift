@@ -1,7 +1,8 @@
 import Foundation
-import Domain
+import RepositoryProtocols
+import APIEndpoints
 
-public enum DataContainer {
+public enum RepositoryContainer {
 
     public static func makeLocationsRepository() -> some LocationsRepositoryProtocol {
         let apiClient = LocationsAPIClient(

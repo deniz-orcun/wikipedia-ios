@@ -1,5 +1,7 @@
 import Foundation
-import Domain
+import RepositoryProtocols
+import DomainModels
+import APIEndpoints
 
 package actor LocationsRepository: LocationsRepositoryProtocol {
     private let apiClient: any LocationsAPIClientProtocol

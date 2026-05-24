@@ -1,4 +1,5 @@
 import Foundation
+import DomainModels
 
 public protocol WikipediaPlacesURLUseCaseProtocol: Sendable {
     /// The Wikipedia Places deep link for `location`, or `nil` when the coordinate is out of range.

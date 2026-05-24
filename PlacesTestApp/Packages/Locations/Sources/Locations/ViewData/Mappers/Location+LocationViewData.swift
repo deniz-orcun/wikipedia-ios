@@ -1,5 +1,5 @@
 import Foundation
-import Domain
+import DomainModels
 
 extension Location {
     func toViewData() -> LocationViewData {

@@ -1,5 +1,4 @@
-import Foundation
-import Domain
+import DomainModels
 
 extension LocationViewData {
     var asLocation: Location {

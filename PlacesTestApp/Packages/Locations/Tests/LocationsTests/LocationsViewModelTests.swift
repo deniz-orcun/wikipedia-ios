@@ -1,6 +1,7 @@
 import Testing
 import Foundation
-import Domain
+import DomainModels
+import UseCases
 @testable import Locations
 
 private final class SpyCoordinator: LocationsCoordinatorProtocol {

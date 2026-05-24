@@ -1,6 +1,7 @@
-import Foundation
+import DomainModels
+import RepositoryProtocols
 
-public enum DomainContainer {
+public enum UseCaseContainer {
 
     public static func makeLocationsUseCase(
         repository: any LocationsRepositoryProtocol

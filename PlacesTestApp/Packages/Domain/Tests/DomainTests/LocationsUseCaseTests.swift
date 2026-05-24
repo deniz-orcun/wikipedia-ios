@@ -1,6 +1,8 @@
 import Testing
 import Foundation
-import Domain
+import DomainModels
+import RepositoryProtocols
+import UseCases
 
 @Suite("LocationsUseCase")
 struct LocationsUseCaseTests {

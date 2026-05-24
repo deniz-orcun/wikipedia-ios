@@ -1,4 +1,5 @@
 import Foundation
+import DomainModels
 
 public protocol LocationsRepositoryProtocol: Sendable {
     /// The full list of available locations.

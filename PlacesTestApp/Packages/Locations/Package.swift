@@ -13,14 +13,21 @@ let package = Package(
     targets: [
         .target(
             name: "Locations",
-            dependencies: ["Domain"],
+            dependencies: [
+                .product(name: "DomainModels", package: "Domain"),
+                .product(name: "UseCases", package: "Domain"),
+            ],
             swiftSettings: [
                 .defaultIsolation(MainActor.self)
             ]
         ),
         .testTarget(
             name: "LocationsTests",
-            dependencies: ["Locations", "Domain"],
+            dependencies: [
+                "Locations", 
+                .product(name: "DomainModels", package: "Domain"),
+                .product(name: "UseCases", package: "Domain"),
+            ],
             swiftSettings: [
                 .defaultIsolation(MainActor.self)
             ]

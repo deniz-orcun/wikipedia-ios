@@ -1,4 +1,6 @@
 import Foundation
+import DomainModels
+import RepositoryProtocols
 
 public protocol LocationsUseCaseProtocol: Sendable {
     /// The full list of available locations.

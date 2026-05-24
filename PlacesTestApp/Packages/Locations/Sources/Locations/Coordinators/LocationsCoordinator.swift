@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 import SwiftUI
-import Domain
+import UseCases
 
 public protocol AddLocationDelegate: AnyObject {
     /// Notified after a location is added through the add-location page.

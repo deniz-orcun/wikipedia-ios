@@ -6,8 +6,19 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BAB67AA52FC3BCC800D05D1D /* Repositories in Frameworks */ = {isa = PBXBuildFile; productRef = BAB67AA42FC3BCC800D05D1D /* Repositories */; };
+		BAB67AA72FC3BCC800D05D1D /* DomainModels in Frameworks */ = {isa = PBXBuildFile; productRef = BAB67AA62FC3BCC800D05D1D /* DomainModels */; };
+		BAB67AA92FC3BCC800D05D1D /* RepositoryProtocols in Frameworks */ = {isa = PBXBuildFile; productRef = BAB67AA82FC3BCC800D05D1D /* RepositoryProtocols */; };
+		BAB67AAB2FC3BCC800D05D1D /* UseCases in Frameworks */ = {isa = PBXBuildFile; productRef = BAB67AAA2FC3BCC800D05D1D /* UseCases */; };
+		BAB67AAD2FC3BCC800D05D1D /* Locations in Frameworks */ = {isa = PBXBuildFile; productRef = BAB67AAC2FC3BCC800D05D1D /* Locations */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		AA0000000000000000000020 /* PlacesTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000201 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Domain; path = Packages/Domain; sourceTree = "<group>"; };
+		AA0000000000000000000202 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = Packages/Data; sourceTree = "<group>"; };
+		AA0000000000000000000203 /* Locations */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Locations; path = Packages/Locations; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,6 +40,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB67AAB2FC3BCC800D05D1D /* UseCases in Frameworks */,
+				BAB67AAD2FC3BCC800D05D1D /* Locations in Frameworks */,
+				BAB67AA72FC3BCC800D05D1D /* DomainModels in Frameworks */,
+				BAB67AA92FC3BCC800D05D1D /* RepositoryProtocols in Frameworks */,
+				BAB67AA52FC3BCC800D05D1D /* Repositories in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +55,10 @@
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000030 /* PlacesTestApp */,
+				AA0000000000000000000203 /* Locations */,
+				AA0000000000000000000201 /* Domain */,
+				AA0000000000000000000202 /* Data */,
+				BAB67AA32FC3BCC800D05D1D /* Frameworks */,
 				AA0000000000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +69,13 @@
 				AA0000000000000000000020 /* PlacesTestApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BAB67AA32FC3BCC800D05D1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +97,13 @@
 				AA0000000000000000000030 /* PlacesTestApp */,
 			);
 			name = PlacesTestApp;
+			packageProductDependencies = (
+				BAB67AA42FC3BCC800D05D1D /* Repositories */,
+				BAB67AA62FC3BCC800D05D1D /* DomainModels */,
+				BAB67AA82FC3BCC800D05D1D /* RepositoryProtocols */,
+				BAB67AAA2FC3BCC800D05D1D /* UseCases */,
+				BAB67AAC2FC3BCC800D05D1D /* Locations */,
+			);
 			productName = PlacesTestApp;
 			productReference = AA0000000000000000000020 /* PlacesTestApp.app */;
 			productType = "com.apple.product-type.application";
@@ -98,6 +132,8 @@
 				Base,
 			);
 			mainGroup = AA0000000000000000000002;
+			packageReferences = (
+			);
 			productRefGroup = AA0000000000000000000003 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +294,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BAB67AA42FC3BCC800D05D1D /* Repositories */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Repositories;
+		};
+		BAB67AA62FC3BCC800D05D1D /* DomainModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DomainModels;
+		};
+		BAB67AA82FC3BCC800D05D1D /* RepositoryProtocols */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RepositoryProtocols;
+		};
+		BAB67AAA2FC3BCC800D05D1D /* UseCases */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCases;
+		};
+		BAB67AAC2FC3BCC800D05D1D /* Locations */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Locations;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA0000000000000000000001 /* Project object */;
 }

@@ -1,4 +1,5 @@
 import Foundation
+import DataModels
 
 package protocol LocationsAPIClientProtocol: Sendable {
     /// Fetches the raw `LocationDataModel` payload from the locations endpoint.
