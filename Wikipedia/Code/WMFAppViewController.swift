@@ -1127,7 +1127,11 @@ final class WMFAppViewController: UITabBarController, AppTabBarDelegate {
             dismissPresentedViewControllers()
             selectedIndex = WMFAppTabType.places.rawValue
             currentTabNavigationController?.popToRootViewController(animated: animated)
-            if let articleURL = activity.wmf_linkURL() {
+            if activity.wmf_hasPlacesCoordinate() {
+                let coordinate = activity.wmf_placesCoordinate()
+                placesViewController.updateViewModeToMap()
+                placesViewController.showLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            } else if let articleURL = activity.wmf_linkURL() {
                 placesViewController.updateViewModeToMap()
                 placesViewController.showArticleURL(articleURL)
             }

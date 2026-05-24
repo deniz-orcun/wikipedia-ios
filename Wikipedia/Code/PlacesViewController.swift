@@ -2088,6 +2088,22 @@ class PlacesViewController: ArticleLocationCollectionViewController, UISearchBar
         recenterOnUserLocation(self)
     }
 
+    /// Centers the map on a caller-specified coordinate (e.g. from a `wikipedia://places?latitude=..&longitude=..`
+    /// deep link) and searches the top articles there, instead of recentering on the user's current location.
+    @objc public func showLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        guard view != nil else { // force view instantiation
+            return
+        }
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        guard CLLocationCoordinate2DIsValid(coordinate) else {
+            return
+        }
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        currentSearch = nil
+        performDefaultSearch(withRegion: region)
+    }
+
     @objc public func showArticleURL(_ articleURL: URL) {
         guard let article = dataStore.fetchArticle(with: articleURL), let title = articleURL.wmf_title,
               view != nil else { // force view instantiation

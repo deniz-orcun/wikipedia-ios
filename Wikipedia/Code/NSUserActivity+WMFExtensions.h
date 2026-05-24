@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, WMFUserActivityType) {
@@ -46,6 +47,12 @@ extern NSString *const WMFNavigateToActivityNotification;
 - (nullable NSURL *)wmf_linkURL;
 
 - (NSURL *)wmf_contentURL;
+
+/// YES when a Places activity carries a caller-specified coordinate (via `wikipedia://places?latitude=..&longitude=..`).
+- (BOOL)wmf_hasPlacesCoordinate;
+
+/// The caller-specified Places coordinate, or `kCLLocationCoordinate2DInvalid` when none was provided.
+- (CLLocationCoordinate2D)wmf_placesCoordinate;
 
 + (NSURL *)wmf_baseURLForActivityOfType:(WMFUserActivityType)type;
 
